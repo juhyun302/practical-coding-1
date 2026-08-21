@@ -1,0 +1,6 @@
+services:
+  myweb:
+    build: .
+    image: practical-coding-favorite-music-spring:local
+    ports:
+      - "3000:3000"

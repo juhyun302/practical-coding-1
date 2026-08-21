@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.3.2/css/bootstrap.min.css">
+    <script src="/webjars/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/webjars/popper.js/2.11.7/umd/popper.min.js"></script>
+    <script src="/webjars/bootstrap/5.3.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          $("button").click(function(){
+
+            $.ajax({
+
+              type: 'GET',
+              url: '/test?id=1',
+              success: function(data){
+                alert(data);
+                $('#item_nm span').text('수제 햄버거')
+                $('#item_detail span').text('소고기 패티와 토마토가 들어 있는 햄버거')
+                $('#item_reg_date span').text('2022년 4월 30일')
+                $('#item_price span').text('4000원')
+              }
+
+            });
+
+
+          });
+        });
+    </script>
+
+</head>
+<body>
+    <h1>상품 데이터 출력 예제</h1>
+    <div id = "item_nm">상품명: <span></span></div>
+    <div id = "item_detail">상품 상세설명: <span></span></div>
+    <div id = "item_reg_date">상품 등록일: <span></span></div>
+    <div id = "item_price">상품가격: <span></span></div>
+    <button>조회</button>
+</body>
+</html>

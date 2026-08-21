@@ -1,0 +1,33 @@
+# OS and editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+firebaseKey.json
+*service-account*.json
+
+# Java
+**/target/
+
+# Node.js
+**/node_modules/
+
+# Python
+**/__pycache__/
+**/.pytest_cache/
+**/*.pyc
+**/venv/
+
+# Flutter
+**/.dart_tool/
+**/build/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+
+# Local application data
+**/todos.json
